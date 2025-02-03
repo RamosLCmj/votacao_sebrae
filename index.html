@@ -8,7 +8,7 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    <h1>Sistema de Votação Online</h1>
+    <h1>Vote na sua Empresária!</h1>
     <form id="formulario-votacao" action="votacao.php" method="post">
         <label for="nome">Nome Completo:</label>
         <input type="text" id="nome" name="nome"  required autofocus>
@@ -21,7 +21,7 @@
         <input type="date" id="dataNascimento" name="dataNascimento" required>
         
 
-        <h2>Escolha seu candidato:</h2>
+        <h2>Escolha a sua Empresária:</h2>
 
         <div class="candidate-card">
             <img src="candidato1.jpg" alt="Candidato 1">
@@ -58,7 +58,9 @@
             <input type="radio" id="candidato5" name="voto" value="Candidato 5">
         </div>
 
-        <button id="submit" type="submit">Votar</button>
+        <button class="btn liquid" id="submit" type="submit">
+            <span>Votar</span>
+        </button>
     </form>
 </body>
 </html>

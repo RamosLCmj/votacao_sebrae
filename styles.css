@@ -1,3 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Estilos baseados na identidade visual do Sebrae */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -9,67 +18,120 @@ body {
     min-height: 100vh;
     flex-direction: column;
 }
+
 h1 {
-    color: #333;
+    margin-top: 15px;
+    color: #004990; /* Azul Sebrae */
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
+
 form {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 73, 144, 0.2);
+    width: 90%;
+    max-width: 350px;
 }
+
 label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
+    color: #004990;
 }
+
 input[type="text"], input[type="date"] {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin-bottom: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 16px;
 }
+
 .candidate-card {
-    border: 1px solid #ccc;
+    border: 2px solid #004990;
     border-radius: 8px;
     padding: 16px;
     margin-bottom: 16px;
     text-align: center;
+    background-color: #e8f1fa;
 }
+
 .candidate-card img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     margin-bottom: 8px;
 }
+
 .candidate-card h3 {
     margin: 0;
     font-size: 18px;
-    color: #333;
+    color: #004990;
 }
+
 .candidate-card p {
     font-size: 14px;
     color: #666;
 }
+
 input[type="radio"] {
     margin-right: 8px;
 }
-button {
-    background-color: #28a745;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
+
+
+
+.btn {
+    position: relative;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
     width: 100%;
-}
-button:hover {
-    background-color: #218838;
+    color: #004990;
+    background: none;
+    border: 2px solid #004990;
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .liquid {
+    background: linear-gradient(#004990 0 0) no-repeat calc(200% - var(--p, 0%))
+      100% / 200% var(--p, 0.2em);
+    transition: 0.3s var(--t, 0s),
+      background-position 0.3s calc(0.3s - var(--t, 0s));
+  }
+  
+  .liquid:hover {
+    --p: 100%;
+    --t: 0.3s;
+    color: #fff;
+  }
+  
+#erro-cpf {
+    font-size: 14px;
+    color: red;
+    margin-top: 5px;
 }
 
-#erro-cpf{
-    font-size: 14px;
-    margin-top: none;
+/* Responsividade */
+@media (min-width: 768px) {
+    form {
+        width: 100%;
+        max-width: 90%;
+    }
+
+    .candidate-card {
+        padding: 12px;
+    }
+
+    button {
+        padding: 10px;
+    }
 }
