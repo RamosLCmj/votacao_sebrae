@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <title>Voto</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
 </head>
 <body>
-    <h1>Vote na sua Empresária!</h1>
+    <header>
+        <img id="sebraeLogo" src="images/Sebrae.svg.png">
+        <img id="sicoobCoopemataLogo" src="images/ccSicoobCoopemata.png">
+        <img id="CDLCataguases" src="images/CDLCataguases.png">
+        
+    </header>
+    <h1>Preencha e vote!</h1>
     <form id="formulario-votacao" action="votacao.php" method="post">
         <label for="nome">Nome Completo:</label>
         <input type="text" id="nome" name="nome"  required autofocus>
@@ -19,18 +28,18 @@
 
         <label for="dataNascimento">Data de Nascimento:</label>
         <input type="date" id="dataNascimento" name="dataNascimento" required>
-        
+        <div id="mensagemErroDataNascimentof" style="color: red; display: none;">Data de nascimento inválida.</div>
 
-        <h2>Escolha a sua Empresária:</h2>
+        <h2>Escolha o seu Voto:</h2>
 
-        <div class="candidate-card">
-            <img src="candidato1.jpg" alt="Candidato 1">
-            <h3>Candidato 1</h3>
+        <div class="candidate-card ">
+            <img src="/images/intimidadesphoto.jpeg" alt="Candidato 1">
+            <h3>Fernanda - Intimidades</h3>
             <p>Descrição sobre o Candidato 1. Ele tem uma longa trajetória na política e é conhecido por suas iniciativas em educação.</p>
             <input type="radio" id="candidato1" name="voto" value="Candidato 1">
         </div>
 
-        <div class="candidate-card">
+        <div class="candidate-card" data-aos="fade-up">
             <img src="candidato2.jpg" alt="Candidato 2">
             <h3>Candidato 2</h3>
             <p>Descrição sobre o Candidato 2. Ele é um empresário bem-sucedido e promete trazer mais empregos para a região.</p>
@@ -62,5 +71,11 @@
             <span>Votar</span>
         </button>
     </form>
+
+    <footer>
+        <p>Feito por Lucas Martins</p>
+        <p>&copy; 2025. Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 </html>

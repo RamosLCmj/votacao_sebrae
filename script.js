@@ -14,35 +14,6 @@ cpfInput.addEventListener('input', function () {
     mascaraCPF(this);
 });
 
-// function validarCPF(cpf) {
-//     // Remove caracteres não numéricos
-//     cpf = cpf.replace(/\D/g, '');
-
-//     // Verifica se o CPF tem 11 dígitos ou se é uma sequência de dígitos repetidos
-//     if (cpf.length !== 11 || /^(\d)\1{10}$/.test(cpf)) {
-//         return false;
-//     }
-
-//     // Função para calcular o dígito verificador
-//     function calcularDigito(parteCPF, multiplicadorInicial) {
-//         let soma = 0;
-//         for (let i = 0; i < parteCPF.length; i++) {
-//             soma += parseInt(parteCPF.charAt(i)) * multiplicadorInicial--;
-//         }
-//         const resto = soma % 11;
-//         return resto < 2 ? 0 : 11 - resto;
-//     }
-
-//     // Calcula o primeiro dígito verificador
-//     const primeiroDigito = calcularDigito(cpf.substring(0, 9), 10);
-
-//     // Calcula o segundo dígito verificador
-//     const segundoDigito = calcularDigito(cpf.substring(0, 10), 11);
-
-//     // Verifica se os dígitos calculados são iguais aos dígitos informados
-//     return cpf.charAt(9) === primeiroDigito.toString() && cpf.charAt(10) === segundoDigito.toString();
-// }
-
 const mensagemErro = document.getElementById('erro-cpf');
 
 cpfInput.addEventListener('blur', function () {
@@ -53,19 +24,6 @@ cpfInput.addEventListener('blur', function () {
         mensagemErro.style.display = 'none';
     }
 });
-
-// function validarDataNascimento(data) {
-//     // Converte a data inserida para um objeto Date
-//     const dataNascimento = new Date(data);
-//     const hoje = new Date(); // Data atual
-
-//     // Verifica se a data de nascimento é posterior ao dia atual
-//     if (dataNascimento > hoje) {
-//         return false; // Data inválida (futura)
-//     }
-
-//     return true; // Data válida
-// }
 
 
 
@@ -114,6 +72,21 @@ formulario.addEventListener('submit', function (event) {
         alert('Data de nascimento inválida. Você não pode nascer no futuro!');
         return;
     }
+ 
+    
+    
+
+    
+
+
+
+
+
+
+
+
+
+
 
     // Exibe a confirmação
     const confirmacao = confirm('Tem certeza de que deseja enviar seu voto?');
