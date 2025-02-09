@@ -1,81 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <title>Voto</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
-</head>
-<body>
-    <header>
-        <img id="sebraeLogo" src="images/Sebrae.svg.png">
-        <img id="sicoobCoopemataLogo" src="images/ccSicoobCoopemata.png">
-        <img id="CDLCataguases" src="images/CDLCataguases.png">
-        
-    </header>
-    <h1>Preencha e vote!</h1>
-    <form id="formulario-votacao" action="votacao.php" method="post">
-        <label for="nome">Nome Completo:</label>
-        <input type="text" id="nome" name="nome"  required autofocus>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+            <title>Votação: Empodera Mulher</title>
+            <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+            <link rel="stylesheet" href="styles.css">
+            <script defer src="script.js"></script>
+        </head>
+        <body>
+            <header>
+                <img id="CDLCataguases" src="images/CDLCataguases.png">
+                <img id="sebraeLogo" src="images/Sebrae.svg.png">
+                <img id="sicoobCoopemataLogo" src="images/ccSicoobCoopemata.png">
+            </header>
+            <h1>Chegou a hora de reconhecer mulheres que fazem a diferença!</h1>
+            <p id="subTitle">Prazo para votação - <b>10/03/2025</b> | Limite de votos - <b>1 voto por CPF</b></p>
+            <form id="formulario-votacao" action="votacao.php" method="post">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome"  required autofocus>
 
-        <label for="cpf">CPF:</label>
-        <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00"  required>
-        <div id="erro-cpf" style="color: red; display: none;">CPF inválido. Digite um CPF válido.</div>
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00"  required>
+                <div id="erro-cpf" style="color: red; display: none;">CPF inválido. Digite um CPF válido.</div>
 
-        <label for="dataNascimento">Data de Nascimento:</label>
-        <input type="date" id="dataNascimento" name="dataNascimento" required>
-        <div id="mensagemErroDataNascimentof" style="color: red; display: none;">Data de nascimento inválida.</div>
+                <label for="dataNascimento">Data de Nascimento:</label>
+                <input type="date" id="dataNascimento" name="dataNascimento" required>
+                <div id="mensagemErroDataNascimentof" style="color: red; display: none;">Data de nascimento inválida.</div>
 
-        <h2>Escolha o seu Voto:</h2>
+                <h2>Escolha sua homenageada:</h2>
 
-        <div class="candidate-card ">
-            <img src="/images/intimidadesphoto.jpeg" alt="Candidato 1">
-            <h3>Fernanda - Intimidades</h3>
-            <p>Descrição sobre o Candidato 1. Ele tem uma longa trajetória na política e é conhecido por suas iniciativas em educação.</p>
-            <input type="radio" id="candidato1" name="voto" value="Candidato 1">
-        </div>
+                <div class="candidate-card ">   
+                    <img src="images/intimidadesphoto.jpeg" alt="Candidato 1">
+                    <h3>Carina de Souza Cortes - Intimidades</h3>
+                    <p>
+                        A <b>Intimidades</b>, primeira loja especializada em lingerie de Cataguases, foi fundada há 35 anos por Rozany, Nair e Carina, unindo empreendedorismo e inovação. Hoje, o grupo conta com três unidades: duas em Cataguases, sendo uma franquia Lupo, e uma em Leopoldina. Sempre atenta às inovações do mercado, a empresa busca oferecer peças modernas, confortáveis e de qualidade.
+                    </p>
+                    <input type="radio" id="candidato1" name="voto" value="Candidato 1">
+                </div>
 
-        <div class="candidate-card" data-aos="fade-up">
-            <img src="candidato2.jpg" alt="Candidato 2">
-            <h3>Candidato 2</h3>
-            <p>Descrição sobre o Candidato 2. Ele é um empresário bem-sucedido e promete trazer mais empregos para a região.</p>
-            <input type="radio" id="candidato2" name="voto" value="Candidato 2">
-        </div>
+                <div class="candidate-card" data-aos="fade-up">
+                    <img src="candidato2.jpg" alt="Candidato 2">
+                    <h3>Candidato 2</h3>
+                    <p>Descrição sobre o Candidato 2. Ele é um empresário bem-sucedido e promete trazer mais empregos para a região.</p>
+                    <input type="radio" id="candidato2" name="voto" value="Candidato 2">
+                </div>
 
-        <div class="candidate-card">
-            <img src="candidato3.jpg" alt="Candidato 3">
-            <h3>Candidato 3</h3>
-            <p>Descrição sobre o Candidato 3. Ela é uma ativista ambiental e tem como prioridade a sustentabilidade.</p>
-            <input type="radio" id="candidato3" name="voto" value="Candidato 3">
-        </div>
+                <div class="candidate-card">
+                    <img src="candidato3.jpg" alt="Candidato 3">
+                    <h3>Candidato 3</h3>
+                    <p>Descrição sobre o Candidato 3. Ela é uma ativista ambiental e tem como prioridade a sustentabilidade.</p>
+                    <input type="radio" id="candidato3" name="voto" value="Candidato 3">
+                </div>
 
-        <div class="candidate-card">
-            <img src="candidato4.jpg" alt="Candidato 4">
-            <h3>Candidato 4</h3>
-            <p>Descrição sobre o Candidato 4. Ele é um ex-atleta e defende melhorias na saúde e esportes.</p>
-            <input type="radio" id="candidato4" name="voto" value="Candidato 4">
-        </div>
+                <div class="candidate-card">
+                    <img src="candidato4.jpg" alt="Candidato 4">
+                    <h3>Candidato 4</h3>
+                    <p>Descrição sobre o Candidato 4. Ele é um ex-atleta e defende melhorias na saúde e esportes.</p>
+                    <input type="radio" id="candidato4" name="voto" value="Candidato 4">
+                </div>
 
-        <div class="candidate-card">
-            <img src="candidato5.jpg" alt="Candidato 5">
-            <h3>Candidato 5</h3>
-            <p>Descrição sobre o Candidato 5. Ela é uma educadora e tem como foco a reforma do sistema educacional.</p>
-            <input type="radio" id="candidato5" name="voto" value="Candidato 5">
-        </div>
+                <div class="candidate-card">
+                    <img src="candidato5.jpg" alt="Candidato 5">
+                    <h3>Candidato 5</h3>
+                    <p>Descrição sobre o Candidato 5. Ela é uma educadora e tem como foco a reforma do sistema educacional.</p>
+                    <input type="radio" id="candidato5" name="voto" value="Candidato 5">
+                </div>
 
-        <button class="btn liquid" id="submit" type="submit">
-            <span>Votar</span>
-        </button>
-    </form>
+                <button class="btn liquid" id="submit" type="submit">
+                    <span>Votar</span>
+                </button>
+            </form>
 
-    <footer>
-        <p>Feito por Lucas Martins</p>
-        <p>&copy; 2025. Todos os direitos reservados.</p>
-    </footer>
+            <footer>
+                <p>Feito por Lucas Martins</p>
+                <a href="https://www.linkedin.com/in/lucasmartinssw" target="_blank" rel="noopener noreferrer">
+                    <i id="linkedin-icon" class="ph ph-linkedin-logo"></i>
+                </a>             
+                <p>&copy; 2025. Todos os direitos reservados.</p>
+            </footer>
 
-</body>
-</html>
+        </body>
+        </html>
